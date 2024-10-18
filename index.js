@@ -1,4 +1,7 @@
-const app = require('./app');
+const http = require('http');
 
-console.log(app);
-console.log(__dirname);
+http.createServer((req, resp) => {
+    resp.write("Hello, this is it!!");
+    resp.end();
+}).listen(4500);
+l̥
