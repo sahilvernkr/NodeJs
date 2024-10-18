@@ -1,6 +1,2 @@
-const http = require('http');
-
-http.createServer((req, resp) => {
-    resp.write("Hello, this is it!!");
-    resp.end();
-}).listen(4500);
+const colors = require('colors');
+console.log("hello".red);
