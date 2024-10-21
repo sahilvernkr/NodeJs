@@ -1,2 +1,2 @@
 
-console.log("stcuck on nodemon");
+console.log("nodemon fixed");
