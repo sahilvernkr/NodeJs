@@ -1,15 +1,17 @@
 const fs = require('fs');
 
-const input = process.argv;
+const path = require('path');
+const dirPath = path.join(__dirname, 'files');
+console.log(dirPath);
 
-if (input[2] == 'add') {
-    fs.writeFileSync(input[3], input[4])
+//create files
+for (i = 0; i < 5; i++) {
+    fs.writeFileSync(dirPath + '/apple' + i + '.txt', 'this is apple file')
 }
-else if (input[2] == 'remove') {
-    fs.unlinkSync(input[3])
-}
-else {
-    console.log('invalid output')
-}
-//run -- node .\index.js add orange.txt 'this is a fruit'
-//run -- node .\index.js remove orange.txt 
+
+//show created files
+fs.readdir(dirPath, (error, files) => {
+    files.forEach((item) => {
+        console.log(item);
+    })
+})
